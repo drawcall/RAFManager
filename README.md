@@ -1,5 +1,7 @@
-RAFManager - a simple requestAnimationFrame animation manager
+RAFManager
 ======
+
+![logo](https://github.com/a-jie/RAFManager/blob/master/logo/raf.gif)
 
 ## Features
 RAFManager is a simple requestAnimationFrame animation manager.
