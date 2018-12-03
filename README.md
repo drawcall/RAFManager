@@ -7,14 +7,6 @@ With RAFManager you can control the addition/deletion animations globally with p
 
 #### The important thing is that it has only a few dozen lines of code, and the size is so small that you can ignore it.
 
-* 一个基本的js库应该如何编写  
-* 基本的前端项目都要哪些文件
-* 又要怎么打包发布到npm上  
-* 你的es6语法如何才能让别人识别  
-* readme应该如何编写  
-* 如何添加eslint
-* 怎么才能打包一个umd格式文件让html直接引用
-
 ## Usage
 #### Use directly in the page
 
@@ -53,9 +45,7 @@ RAFManager.add((title)=>{
 ```
 
 ## Build
-Node is a dependency, use terminal to install it with with:  
-
-### 打包
+Node is a dependency, use terminal to install it with npm:  
 
 ```javascript
 npm install
