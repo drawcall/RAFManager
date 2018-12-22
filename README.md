@@ -4,8 +4,8 @@ RAFManager
 ![logo](https://github.com/a-jie/RAFManager/blob/master/logo/raf.gif)
 
 ## Features
-RAFManager is a simple requestAnimationFrame animation manager.
-With RAFManager you can control the addition/deletion animations globally with precision.
+__RAFManager__ is a simple __requestAnimationFrame__ animation manager.
+With __RAFManager__ you can control the addition/deletion animations globally with precision.
 
 #### The important thing is that it has only a few dozen lines of code, and the size is so small that you can ignore it.
 
