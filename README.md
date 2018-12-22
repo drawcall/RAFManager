@@ -9,6 +9,8 @@ With RAFManager you can control the addition/deletion animations globally with p
 
 #### The important thing is that it has only a few dozen lines of code, and the size is so small that you can ignore it.
 
+You can use it as the base library for your animation project, or wherever you want to use it.
+
 ## Usage
 #### Use directly in the page
 
@@ -25,25 +27,37 @@ npm install raf-manager --save
 import RAFManager from 'raf-manager';
 ```
 
-#### API:
+### API:
+
+##### add a animation function -- auto start
 ```javascript
-// add animation func -- auto start
 RAFManager.add(func, fps, param); 
+```
 
-// remove animation func -- auto stop
+##### remove a animation function -- auto stop
+```javascript
 RAFManager.remove(func);
+```
 
-// start and stop
+##### force start and stop
+```javascript
 RAFManager.start();
 RAFManager.stop();
 ```
 
-#### Usage demo:
+### Usage demo:
 ```javascript
-RAFManager.add((title)=>{
+RAFManager.add(({title})=>{
+    top++;
     this.inputRef.current.innerHTML = title;
     this.inputRef.current.style.top = top + 'px';
-}, 25, { title:'hello world!' }); 
+}, 25, { title:'hello world!' });
+```
+
+```javascript
+RAFManager.add(func1, 2);
+RAFManager.add(func2, 2.5);
+RAFManager.add(func3, 10);
 ```
 
 ## Build
