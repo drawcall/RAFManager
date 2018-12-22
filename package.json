@@ -5,7 +5,6 @@
   "description": "RAFManager is a simple requestAnimationFrame animation manager.",
   "main": "./build/RAFManager.min.js",
   "scripts": {
-    "test": "concurrently --names \"ROLLUP,HTTP\" -c \"bgBlue.bold,bgGreen.bold\" \"rollup -c -w -m inline\" \"serve --port 3001\"",
     "lint": "eslint ./src --config=eslintrc.json",
     "build-normal": "rollup -c",
     "build-min": "rollup -c --min",
