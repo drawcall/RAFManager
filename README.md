@@ -47,17 +47,18 @@ RAFManager.stop();
 
 ### Usage demo
 ```javascript
-RAFManager.add(({title})=>{
+RAFManager.add((title)=>{
     top++;
-    this.inputRef.current.innerHTML = title;
-    this.inputRef.current.style.top = top + 'px';
-}, 25, { title:'hello world!' });
+    const node = this.inputRef.current;
+    node.innerHTML = title;
+    node.style.top = top + 'px';
+}, 25, 'hello world!');
 ```
 
 ```javascript
 RAFManager.add(func1, 2);
-RAFManager.add(func2, 2.5);
-RAFManager.add(func3, 10);
+RAFManager.add(func2, 3.5);
+RAFManager.add(func3, 10.5);
 ```
 
 ## Build
