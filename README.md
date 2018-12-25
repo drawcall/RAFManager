@@ -29,17 +29,17 @@ import RAFManager from 'raf-manager';
 
 ### API
 
-* ##### add a animation function -- auto start
+🌖##### add a animation function -- auto start
 ```javascript
 RAFManager.add(func, fps, param); 
 ```
 
-* ##### remove a animation function -- auto stop
+🌖##### remove a animation function -- auto stop
 ```javascript
 RAFManager.remove(func);
 ```
 
-* ##### force start and stop
+🌖##### force start and stop
 ```javascript
 RAFManager.start();
 RAFManager.stop();
