@@ -1,7 +1,7 @@
 RAFManager
 ======
 
-![logo](https://github.com/a-jie/RAFManager/blob/master/logo/raf.gif)
+![logo](https://github.com/drawcall/RAFManager/blob/master/logo/raf.gif)
 
 ## Features
 __RAFManager__ is a simple __requestAnimationFrame__ animation manager.
