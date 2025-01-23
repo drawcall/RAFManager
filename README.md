@@ -1,53 +1,66 @@
-RAFManager
-======
+# RAFManager
 
 ![logo](https://github.com/drawcall/RAFManager/blob/master/logo/raf.gif)
 
-## Features
-__RAFManager__ is a simple __requestAnimationFrame__ animation manager.
-With __RAFManager__ you can control the addition/deletion animations globally with precision.
+## Overview
 
-#### The important thing is that it has only a few dozen lines of code, and the size is so small that you can ignore it.
+**RAFManager** is a lightweight and efficient animation manager built on top of the `requestAnimationFrame` API. It provides precise global control over the addition and removal of animations.
 
-You can use it as the base library for your animation project, or wherever you want to use it.
+### Key Features
 
-## Usage
-#### Use directly in the page
+- **Minimalistic**: Implemented in just a few dozen lines of code
+- **Easy Integration**: Use as a foundation for animation projects or integrate where needed
+- **Global Control**: Effortlessly manage animations across your entire application
+
+## Installation
+
+### Browser
+
+Include the script directly in your HTML file:
 
 ```html
 <script src="js/RAFManager.min.js"></script>
 ```
 
-#### Or install using npm 
+### npm
+
+Install using npm:
+
+```bash
+npm install raf-manager --save
+```
+
+Then import it in your project:
 
 ```javascript
-npm install raf-manager --save 
-...
-
 import RAFManager from 'raf-manager';
 ```
 
-### API
+## API
 
-##### 🌖add a animation function - auto start
+### Add an Animation Function - Auto Start
+
 ```javascript
-RAFManager.add(func, fps, param); 
+RAFManager.add(func, fps, param);
 ```
 
-##### 🌖remove a animation function - auto stop
+### Remove an Animation Function - Auto Stop
+
 ```javascript
 RAFManager.remove(func);
 ```
 
-##### 🌖force start and stop
+### Force Start and Stop
+
 ```javascript
 RAFManager.start();
 RAFManager.stop();
 ```
 
-### Usage demo
+## Usage Demo
+
 ```javascript
-RAFManager.add((title)=>{
+RAFManager.add((title) => {
     top++;
     const node = this.inputRef.current;
     node.innerHTML = title;
@@ -62,18 +75,20 @@ RAFManager.add(func3, 10.5);
 ```
 
 ## Build
-Node is a dependency, use terminal to install it with npm:  
 
-```javascript
+Node.js is a dependency. Use the terminal to install it with npm:
+
+```bash
 npm install
 npm run build
-``` 
+```
 
-### es6 lint
+### ES6 Lint
 
-```javascript
+```bash
 npm run lint
 ```
 
 ## License
-LicenseFinder is released under the MIT License. http://www.opensource.org/licenses/mit-license
+
+RAFManager is released under the MIT License. [http://www.opensource.org/licenses/mit-license](http://www.opensource.org/licenses/mit-license)
