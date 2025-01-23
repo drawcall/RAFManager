@@ -31,7 +31,7 @@ const plugins = isDev ?
         license({ banner })
     ];
 
-const output = isDev ? { file: `build/${prjName}.js` } : { file: `build/${prjName}.min.js` };
+const output = isDev ? { file: `build/${moduleName}.js` } : { file: `build/${moduleName}.min.js` };
 
 export default {
     input: 'src/RAFManager.js',
