@@ -1,6 +1,5 @@
 declare const RAFManager: {
   timer: number;
-  immediate: boolean;
   state: "start" | "stop";
   animations: Array<{
     callback: (param: any) => void;
@@ -9,6 +8,8 @@ declare const RAFManager: {
     param: any;
     i: number;
   }>;
+  paused: boolean;
+  immediate: boolean;
 
   add(
     callback: (param: any) => void,
@@ -20,6 +21,8 @@ declare const RAFManager: {
   deleteMap(callback: (param: any) => void): void;
   start(): typeof RAFManager;
   stop(): typeof RAFManager;
+  pause(): typeof RAFManager;
+  resume(): typeof RAFManager;
   tick(): void;
 };
 

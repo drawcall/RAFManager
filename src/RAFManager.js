@@ -33,6 +33,7 @@ const RAFManager = {
   timer: 0,
   state: "stop",
   animations: [],
+  paused: false,
   immediate: true,
 
   add(callback, fps = 60, param = null) {
@@ -40,7 +41,7 @@ const RAFManager = {
     const aniData = { callback, fps, n, param, i: 0 };
     this.animations.push(aniData);
     if (this.immediate && this.animations.length >= 1) this.start();
-
+    
     return this;
   },
 
@@ -87,11 +88,24 @@ const RAFManager = {
     return this;
   },
 
+  pause() {
+    if (this.state !== "start" || this.paused) return;
+    this.paused = true;
+    return this;
+  },
+
+  resume() {
+    if (this.state !== "start" || !this.paused) return;
+    this.paused = false;
+    return this;
+  },
+
   tick() {
     this.timer = requestAnimationFrame(() => {
       this.tick();
     });
 
+    if (this.paused) return;
     for (let i = 0; i < this.animations.length; i++) {
       const aniData = this.animations[i];
       const callback = aniData.callback;

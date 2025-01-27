@@ -36,6 +36,7 @@ var RAFManager = {
   timer: 0,
   state: "stop",
   animations: [],
+  paused: false,
   immediate: true,
 
   add: function add(callback) {
@@ -87,6 +88,16 @@ var RAFManager = {
     cancelAnimationFrame(this.timer);
     return this;
   },
+  pause: function pause() {
+    if (this.state !== "start" || this.paused) return;
+    this.paused = true;
+    return this;
+  },
+  resume: function resume() {
+    if (this.state !== "start" || !this.paused) return;
+    this.paused = false;
+    return this;
+  },
   tick: function tick() {
     var _this = this;
 
@@ -94,6 +105,7 @@ var RAFManager = {
       _this.tick();
     });
 
+    if (this.paused) return;
     for (var i = 0; i < this.animations.length; i++) {
       var aniData = this.animations[i];
       var callback = aniData.callback;
