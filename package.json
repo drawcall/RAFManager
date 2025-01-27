@@ -1,7 +1,7 @@
 {
   "name": "raf-manager",
   "moduleName": "RAFManager",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "RAFManager is a simple requestAnimationFrame animation manager.",
   "main": "./build/RAFManager.min.js",
   "types": "index.d.ts",

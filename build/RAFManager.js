@@ -36,6 +36,7 @@ var RAFManager = {
   timer: 0,
   state: "stop",
   animations: [],
+  immediate: true,
 
   add: function add(callback) {
     var fps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 60;
@@ -44,7 +45,7 @@ var RAFManager = {
     var n = 60 / fps;
     var aniData = { callback: callback, fps: fps, n: n, param: param, i: 0 };
     this.animations.push(aniData);
-    if (this.animations.length >= 1) this.start();
+    if (this.immediate && this.animations.length >= 1) this.start();
 
     return this;
   },
@@ -61,7 +62,7 @@ var RAFManager = {
     if (index < 0) return;
 
     this.deleteMap(callback);
-    if (this.animations.length === 0) this.stop();
+    if (this.immediate && this.animations.length === 0) this.stop();
 
     return this;
   },

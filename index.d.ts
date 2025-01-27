@@ -1,5 +1,6 @@
 declare const RAFManager: {
   timer: number;
+  immediate: boolean;
   state: "start" | "stop";
   animations: Array<{
     callback: (param: any) => void;
